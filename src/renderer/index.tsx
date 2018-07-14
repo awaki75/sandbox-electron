@@ -1,12 +1,15 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import Button from '@material-ui/core/Button';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { App } from './component/app';
+import reducer from './reducer';
 
-// tslint:disable-next-line:variable-name
-const App = ({ name }: { name: string }) => (
-  <Button variant="contained" color="primary">
-    Hello {name}
-  </Button>
+const store = createStore(reducer);
+
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('app'),
 );
-
-render(<App name="Taylor" />, document.getElementById('app'));

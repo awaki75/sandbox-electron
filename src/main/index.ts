@@ -1,6 +1,6 @@
 import { app, BrowserWindow } from 'electron';
-import { format } from 'url';
 import { join } from 'path';
+import { format } from 'url';
 
 let mainWindow: BrowserWindow | null = null;
 
