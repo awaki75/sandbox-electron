@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": false,
-    "jsx": "react",
     "lib": ["dom", "dom.iterable", "es2018"],
     "module": "es2015",
     "moduleResolution": "node",
