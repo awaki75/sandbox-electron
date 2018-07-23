@@ -20,6 +20,9 @@ const config = {
     extensions: ['.js', '.ts'],
   },
   target: 'electron-main',
+  node: {
+    __dirname: false,
+  },
 };
 
 module.exports = config;
