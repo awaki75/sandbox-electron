@@ -1,6 +1,4 @@
 import { app, BrowserWindow } from 'electron';
-import { join } from 'path';
-import { format } from 'url';
 
 let mainWindow: BrowserWindow | null = null;
 
@@ -8,16 +6,10 @@ function createWindow() {
   mainWindow = new BrowserWindow();
 
   if (process.env.NODE_ENV === 'production') {
-    mainWindow.loadURL(
-      format({
-        pathname: join(__dirname, 'index.html'),
-        protocol: 'file',
-        slashes: true,
-      }),
-    );
+    mainWindow.loadURL(`file://${__dirname}/index.html`);
   } else {
     mainWindow.webContents.openDevTools();
-    mainWindow.loadURL(`http://localhost:${process.env.ELECTRON_WEBPACK_WDS_PORT}`);
+    mainWindow.loadURL('http://localhost:9080');
   }
 
   mainWindow.on('closed', () => {
