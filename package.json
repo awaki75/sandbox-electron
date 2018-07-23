@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "test": "run-p test:prettier test:tslint test:tsc test:jest",
-    "test:prettier": "prettier -l **/*.{json,js,jsx,ts,tsx}",
-    "test:tslint": "tslint -p . src/**/*.{ts,tsx}",
+    "test:prettier": "prettier -l **/*.{json,js,ts}",
+    "test:tslint": "tslint -p . src/**/*.ts",
     "test:tsc": "tsc --noEmit",
     "test:jest": "jest",
     "coverage": "jest --coverage",

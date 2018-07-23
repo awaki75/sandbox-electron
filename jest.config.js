@@ -2,10 +2,10 @@ const { defaults } = require('jest-config');
 
 module.exports = {
   transform: {
-    '\\.tsx?$': 'ts-jest',
+    '\\.ts$': 'ts-jest',
   },
-  testRegex: '\\.(test|spec)\\.tsx?$',
-  moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts', 'tsx'],
+  testRegex: '\\.(test|spec)\\.ts$',
+  moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts'],
   collectCoverage: false,
-  collectCoverageFrom: ['src/renderer/**/*.{ts,tsx}'],
+  collectCoverageFrom: ['src/renderer/**/*.ts'],
 };
