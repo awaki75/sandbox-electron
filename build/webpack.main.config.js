@@ -2,7 +2,6 @@ const path = require('path');
 
 /** @type {import('webpack').Configuration} */
 const config = {
-  mode: 'development',
   entry: './src/main/index.ts',
   output: {
     path: path.resolve(__dirname, '../dist'),

@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 /** @type {import('webpack').Configuration} */
 const config = {
-  mode: 'development',
   entry: './src/renderer/index.ts',
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -39,6 +38,11 @@ const config = {
     }),
     new VueLoaderPlugin(),
   ],
+  devServer: {
+    contentBase: path.join(__dirname, '../dist'),
+    compress: true,
+    port: 9080,
+  },
 };
 
 module.exports = config;
