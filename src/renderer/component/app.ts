@@ -4,6 +4,7 @@ export default Vue.extend({
   data() {
     return {
       counter: 0,
+      message: '',
     };
   },
   methods: {
