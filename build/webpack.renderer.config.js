@@ -14,6 +14,9 @@ const config = {
       {
         test: /\.ts$/,
         loader: 'ts-loader',
+        options: {
+          appendTsSuffixTo: [/\.vue$/],
+        },
       },
       {
         test: /\.vue$/,
