@@ -22,6 +22,10 @@ const config = {
         test: /\.vue$/,
         loader: 'vue-loader',
       },
+      {
+        test: /\.scss$/,
+        use: ['vue-style-loader', 'css-loader', 'sass-loader'],
+      },
     ],
   },
   resolve: {
