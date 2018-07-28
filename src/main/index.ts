@@ -9,7 +9,7 @@ function createWindow() {
     mainWindow.loadURL(`file://${__dirname}/index.html`);
   } else {
     mainWindow.webContents.openDevTools();
-    mainWindow.loadURL('http://localhost:9080');
+    mainWindow.loadURL(`http://localhost:${process.env.ELECTRON_WEBPACK_WDS_PORT}`);
   }
 
   mainWindow.on('closed', () => {
