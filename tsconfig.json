@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": false,
+    "esModuleInterop": true,
     "lib": ["dom", "dom.iterable", "es2018"],
     "module": "es2015",
     "moduleResolution": "node",
